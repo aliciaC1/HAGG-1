@@ -1,0 +1,627 @@
+/* global */
+
+.main-logo{
+    position: absolute;
+    margin-left: 68px;
+    margin-top: 42px;
+    width: 12%;
+}
+
+.container{
+    position: absolute;
+    margin-top: 221px;
+    width: 60%;
+    margin-left: 10%;
+}
+
+
+.ui.secondary.pointing.menu {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 2px solid rgba(34, 36, 38, 0);
+}
+
+
+element.style {
+}
+.ui.text.shape .side>* {
+    white-space: normal;
+}
+.ui.shape.side * {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    height: 76px;
+    width: 400px;
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    font-weight: 100;
+}
+
+/* index */
+.cover-img {
+    width: 85%;
+    margin-left: 3%;
+    margin-top: 27px;
+    opacity: 1;
+    padding: 10px;
+    z-index: 10;
+}
+
+.ui.grid.price-display {
+    margin-right: 4%;
+    width: 37%;
+    float: right;
+    padding: 10px;
+    margin-top: -240px;
+    position: relative;
+}
+
+.slogan {
+    margin-top: -335px;
+    float: left;
+    margin-left: 56%;
+    padding: 10p;
+    border: none;
+    background-color: transparent;
+    z-index: 0;
+    /* position: absolute; */
+    /* margin-bottom: 60px; */
+}
+.slogan .ui.shape .side * {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    height: 76px;
+    width:100%;
+    text-align: center;
+    background-color:#ffffff00;
+    padding: 20px;
+    font-weight: 100;
+}
+
+
+#features{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 90px;
+    margin-top: 160px;
+    padding-top: 30px;
+}
+
+.ui.internally.celled.grid.features-grid{
+    margin-top: 78px;
+}
+.ui.cards.chart-card{
+    margin-top: -36px;
+    margin-left: 23%;
+}
+.ui.cards.currency-card{
+    margin-left: 10px;
+}
+
+.ui.cards.feed-card{
+    margin-top: -47px;
+
+}
+#team{
+    position: relative;
+    padding: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#technologies{
+    position: relative;
+   
+}
+
+
+.ui.stackable.grid.team-grid{
+    margin-top: 53px;
+}
+.big.horizontal.divided.list {
+    margin-left: 5%;
+    padding: 25px;
+    margin-top: 111px;
+}
+
+
+#download{
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+}
+h1{
+    font-weight: 100;
+}
+
+h3{
+    font-weight: 100;
+}
+
+
+h3.ui.header {
+    font-size: 1.28571429rem;
+    font-weight: 100;
+}
+
+
+
+.features{
+   padding: 15px;
+}
+
+#currencyfeature{
+    margin-top: 65px;
+}
+#mapfeature{
+    width: 87%;
+    margin-top: 85px;
+}
+.ui.cards.map-card{
+    margin-left: 25%;
+}
+
+#chartfeed{
+    width: 92%;
+}
+
+#feedimg {
+    margin-top: 53px;
+    width: 130%;
+    right: 10px;
+    padding: 0px;
+}
+#searchimg {
+    padding: 0px;
+    width: 118%;
+    margin-top: 76px;
+}
+.ui.card .avatar img, .ui.card img.avatar, .ui.cards>.card .avatar img, .ui.cards>.card img.avatar {
+    width: 4em;
+    height: 4em;
+    border-radius: 500rem;
+}
+.iphone-img{
+    width: 63%;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.apps{
+    margin-top: 119px;
+}
+
+.appStore{
+    top: 38px;
+    right: 214px;
+}
+
+.apple-btn{
+    width: 300px;
+}
+
+.app-icon{
+    width: 117px;
+    padding: 10px;
+    margin-top: 14px;
+}
+
+.not-found{
+ 
+    margin-top: 100px;
+    margin-left: 225px;
+
+}
+
+.content-container{
+    padding: 20px;
+    width: 90%;
+}
+
+.container {
+    position: absolute;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 140px;
+}
+
+.hagLogo{
+    width: 184px;
+    margin-bottom: -20px;
+}
+
+.ui.search.dropdown {
+    width: 393px;
+    height: 36px;
+    font-size: rem;
+    background-color: transparent;
+    text-align: center;
+    font-weight: 100;
+}
+
+.ui.shape .side * {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    height: 76px;
+    width: 400px;
+    text-align: center;
+    background-color: #ffffffd9;
+    padding: 20px;
+    font-weight: 100;
+}
+
+div.animated.button.submit {
+    margin-top: 56px;
+    margin-left: 10px;
+    background: #00000003;
+    margin-left: 493px;
+    font-weight: 100;
+    border: 1px solid #c6c6c63b;
+    width: 150px;
+}
+
+.ui.button{
+    background: #00000003;
+    font-weight: 100;
+    border: 1px solid #c6c6c63b;
+}
+
+.logo-login{
+    width: 195px;
+    padding: 20px;
+}
+
+.ui.animated.button {
+    position: relative;
+    overflow: hidden;
+    padding-right: 0!important;
+    vertical-align: middle;
+    z-index: 1;
+    width: 300px;
+}
+
+.ui.horizontal.divider {
+    display: table;
+    white-space: nowrap;
+    height: auto;
+    margin: '';
+    line-height: 1;
+    font-weight: 100;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+
+.ui.form .field .ui.input, .ui.form .fields .field .ui.input, .ui.form .wide.field .ui.input {
+    width: 300px;
+}
+
+
+
+#myChart{
+    background-color: black;
+}
+
+.addPrice{
+    padding: 10px;
+    width: 300px;
+    /* position:relative; */
+}
+
+.ui.label{
+    width: 36px;
+}
+
+.ui.vertical.curBTN.animated.button{
+    width: 45px;
+}
+
+.productInfo{
+    width: 60%;
+    /* left: 22%; */
+    position: relative;
+    display: inline-block;
+}
+
+.ui.vertical.menu {
+    width: 25rem;
+}
+
+.cchart{
+    width: 60%;
+    left: 22%;
+    top: 36px;
+    position: relative;
+    display: inline-block;
+ }
+
+ .ui.header>.image:not(.icon), .ui.header>img {
+    display: inline-block;
+    margin-top: .14285714em;
+    width: 6.5em;
+    height: auto;
+    vertical-align: middle;
+}
+
+.ui.aligned.grid .column>.segment:not(.compact):not(.attached), .ui.grid .aligned.row>.column>.segment:not(.compact):not(.attached) {
+    width: 57%;
+}
+
+.product-dashboard.ui.grid{
+    margin-left: 5%;
+    width: 100%;
+}
+
+.logoProduct {
+    width: 101px;
+    margin-left: 17%;
+    margin-top: -4%;
+}
+
+#newPrice{
+    width: 113px;
+    top: 20px;
+}
+
+.block.ui.header {
+    height: 40%;
+    width: 40%;
+    /* height: 95px;
+    width: 376px; */
+    font-size: 4rem;
+    float: right;
+    margin-top: 100px;
+    margin-right: 39px;
+    /* margin-left: 67px; */
+    background: tansparent;
+    /* padding-bottom: 0px; */
+    background-color: transparent;
+}
+
+   /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       /* #map {
+        height: 384px;
+        width: 35%;
+        float: right;
+        top: 100px;
+        right: 103px;
+        position: absolute;
+    } */
+  img.sidehaglogo{
+    margin-left: 88px;
+    width: 101px;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+    /* float: right; */
+    /* top: 100px; */
+    /* right: 103px; */
+    /* top: 100px; */
+    position: relative;
+    padding: 10px;
+    top: 33px;
+    display: inline-block;
+}
+.map-container {
+    margin-left: 27.5%;
+    margin-left: 27.5;
+    margin-top: 73px;
+    width: 75%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 93px;
+}
+
+
+h2.ui.header.titleproduct{
+    float: left;
+    padding: 10px;
+    margin-left: 79px;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 1350px) {
+    .ui.vertical.menu {
+        width: 23rem;
+    }
+    .block.ui.header {
+        height: 40%;
+        width: 39%;
+        font-size: 4rem;
+        float: right;
+        margin-top: 100px;
+        margin-right: 20px;
+        /* margin-left: 67px; */
+        background: tansparent;
+        /* padding-bottom: 0px; */
+        background-color: transparent;
+    }
+
+}
+@media only screen and (max-width: 850px) {
+    .block.ui.header {
+        height: 40%;
+        width: 62%;
+        font-size: 4rem;
+        float: right;
+        margin-top: 100px;
+        margin-right: 67px;
+        /* margin-left: 67px; */
+        background: tansparent;
+        /* padding-bottom: 0px; */
+        background-color: transparent;
+    }
+    .productInfo {
+        width: 60%;
+        left: 5%;
+        position: relative;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-left: 10%;
+    }
+    .productInfo {
+        width: 60%;
+        left: 2%;
+        position: relative;
+    }
+    .block.ui.header {
+        height: 40%;
+        width: 62%;
+        font-size: 4rem;
+        float: right;
+        margin-top: 44px;
+        margin-right: 73px;
+        /* margin-left: 67px; */
+        background: tansparent;
+        /* padding-bottom: 0px; */
+        background-color: transparent;
+    }
+    #myChart{
+        display: block;
+        height: 202px;
+        width: 502px;
+    
+    }
+    .cchart {
+        width: 60%;
+        left: 19%;
+        top: 36px;
+        position: relative;
+        display: inline-block;
+    }
+    .ui.vertical.menu {
+        width: 19rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .container {       
+    margin-left: 21%;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    .container {       
+        margin-left: 10%;
+        margin-top: 100px;
+    }
+    .ui.search.dropdown {
+        width: 280px;
+        height: 36px;
+        font-size: 1srem;
+        background-color: transparent;
+        text-align: center;
+        font-weight: 100;
+    }
+    #searchResult.button{
+        width: 280px;
+    }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .container {       
+        margin-left: 10%;
+        margin-top: 100px;
+    }
+    .ui.search.dropdown {
+        width: 230px;
+        height: 36px;
+        font-size: 1srem;
+        background-color: transparent;
+        text-align: center;
+        font-weight: 100;
+    }
+    #searchResult.button{
+        width: 230px;
+    }
+    
+    .hagLogo{
+        width: 134px; 
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    [class*="mobile hidden"],
+    [class*="tablet only"]:not(.mobile),
+    [class*="computer only"]:not(.mobile),
+    [class*="large screen only"]:not(.mobile),
+    [class*="widescreen only"]:not(.mobile),
+    [class*="or lower hidden"] {
+      display: none !important;
+    }
+  }
+  
+  /* Tablet / iPad Portrait */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    [class*="mobile only"]:not(.tablet),
+    [class*="tablet hidden"],
+    [class*="computer only"]:not(.tablet),
+    [class*="large screen only"]:not(.tablet),
+    [class*="widescreen only"]:not(.tablet),
+    [class*="or lower hidden"]:not(.mobile) {
+      display: none !important;
+    }
+  }
+  
+  /* Computer / Desktop / iPad Landscape */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    [class*="mobile only"]:not(.computer),
+    [class*="tablet only"]:not(.computer),
+    [class*="computer hidden"],
+    [class*="large screen only"]:not(.computer),
+    [class*="widescreen only"]:not(.computer),
+    [class*="or lower hidden"]:not(.tablet):not(.mobile) {
+      display: none !important;
+    }
+  }
+  
+  /* Large Monitor */
+  @media only screen and (min-width: 1200px) and (max-width: 1919px) {
+    [class*="mobile only"]:not([class*="large screen"]),
+    [class*="tablet only"]:not([class*="large screen"]),
+    [class*="computer only"]:not([class*="large screen"]),
+    [class*="large screen hidden"],
+    [class*="widescreen only"]:not([class*="large screen"]),
+    [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+      display: none !important;
+    }
+  }
+  
+  /* Widescreen Monitor */
+  @media only screen and (min-width: 1920px) {
+    [class*="mobile only"]:not([class*="widescreen"]),
+    [class*="tablet only"]:not([class*="widescreen"]),
+    [class*="computer only"]:not([class*="widescreen"]),
+    [class*="large screen only"]:not([class*="widescreen"]),
+    [class*="widescreen hidden"],
+    [class*="widescreen or lower hidden"] {
+      display: none !important;
+    }
+  }
+  .ui.shape .side * {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    height: 76px;
+    width: 400px;
+    text-align: center;
+    background-color: #ffffff00;
+    padding: 20px;
+    font-weight: 100;
+    font-size: 1.75rem;
+}

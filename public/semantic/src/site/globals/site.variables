@@ -1,0 +1,9 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+
+@fontName : 'HelveticaNeue-Light'; 
+@headerFont        : @fontName, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+@pageFont          : @fontName, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+@fontWeight: 200;
