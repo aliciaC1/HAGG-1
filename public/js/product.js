@@ -4,7 +4,7 @@ var access_key = "fdefafcae0d2e512ba85f64693e2f861";
 
 // get the most recent exchange rates via the "live" endpoint:
 $.ajax({
-    url: "http://apilayer.net/api/" + endpoint + "?access_key=" + access_key,
+    url: "//apilayer.net/api/" + endpoint + "?access_key=" + access_key,
     dataType: "jsonp",
     success: function (json) {
         var averageValue = $("#avg").attr("value");
@@ -53,17 +53,6 @@ var dataArray2 = [];
 var dataArray3 = [];
 //Longtitude Array
 var dataArray4 = [];
-
-console.log($("#avg").attr("value"))
-
-/*
-API.getExamples().then(function (data) {
-    for (var i = 0; i < data.length; i++) {
-        dataArray3.push(data[i].latitude);
-        dataArray4.push(data[i].longitude);
-    }
-});
-*/
 
 Chart.defaults.LineWithLine = Chart.defaults.line;
 Chart.controllers.LineWithLine = Chart.controllers.line.extend({
@@ -173,47 +162,6 @@ var myChart = new Chart(ctx, {
 
 });
 
-//GeoLocation
-
-function geoFindMe() {
-    var output = document.getElementById("out");
-
-    if (!output) {
-        console.log("OUTPUT IS NULL");
-        return;
-    }
-
-    if (!navigator.geolocation) {
-        output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-        return;
-    }
-
-    function success(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-
-        output.innerHTML = "<p>Latitude is " + latitude + "° <br>Longitude is " + longitude + "°</p>";
-
-        /*
-            var img = new Image();
-            img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-    
-            output.appendChild(img);
-            */
-    }
-
-    function error() {
-        output.innerHTML = "Unable to retrieve your location";
-    }
-
-    output.innerHTML = "<p>Locating…</p>";
-
-    navigator.geolocation.getCurrentPosition(success, error);
-}
-
-geoFindMe();
-
-
 // Get references to page elements
 var $exampleText = $("#example-userID");
 var $exampleDescription = $("#example-description");
@@ -221,10 +169,6 @@ var $examplePrice = $("#example-price");
 var $exampleProduct = $("#example-productID");
 var $submitBtn = $("#submitPrice");
 var $exampleList = $("#example-list");
-//var $locationValue = $(this).attr("value");
-var avg;
-var std;
-var priceFiller;
 
 /*
 // The API object contains methods for each kind of request we'll make
@@ -254,79 +198,6 @@ var API = {
 };
 */
 
-$.ajax({
-    url: "/api/examples",
-    method: "GET"
-}).then(function (data) {
-    console.log(data);
-    var sumArray = [];
-    var sumAvg = 0;
-    for (var i = 0; i < data.length; i++) {
-        sumArray.push(parseInt(data[i].price));
-        sumAvg += parseInt(data[i].price);
-        dataArray.push(data[i].createdAt);
-        dataArray2.push(data[i].price);
-    }
-    avg = sumAvg / data.length;
-    std = standardDeviation(sumArray);
-    console.log("AVG " + avg);
-    console.log("STD " + std);
-});
-
-
-//Use of Standard Deviation to Prevent "Troll" Amounts
-function standardDeviation(values) {
-    var avg = average(values);
-
-    var squareDiffs = values.map(function (value) {
-        var diff = value - avg;
-        var sqrDiff = diff * diff;
-        return sqrDiff;
-    });
-
-    var avgSquareDiff = average(squareDiffs);
-
-    var stdDev = Math.sqrt(avgSquareDiff);
-    return stdDev;
-}
-
-function average(data) {
-    var sum = data.reduce(function (sum, value) {
-        return sum + value;
-    }, 0);
-
-    var avg = sum / data.length;
-    return avg;
-}
-
-
-//Use of Standard Deviation to Prevent "Troll" Amounts
-/*
-API.getExamples().then(function (data) {
-    console.log(data);
-    var sumArray = [];
-    var sumAvg = 0;
-    for (var i = 0; i < data.length; i++) {
-        sumArray.push(parseInt(data[i].price));
-        sumAvg += parseInt(data[i].price);
-    }
-    avg = sumAvg / data.length;
-    std = standardDeviation(sumArray);
-    console.log(avg);
-    console.log(std);
-});
-
-
-//Chart Data
-API.getExamples().then(function (data) {
-    console.log(data);
-    for (var i = 0; i < data.length; i++) {
-        dataArray.push(data[i].createdAt);
-        dataArray2.push(data[i].price);
-    }
-});
-*/
-
 console.log($("#avg").attr("data-location"));
 
 // handleFormSubmit is called whenever we submit a new example
@@ -337,27 +208,13 @@ var handleFormSubmit = function (event) {
 
     var priceInput = $examplePrice.val().trim();
 
-    var lowerBound = avg - std;
-    var upperBound = avg + std;
-    if (priceInput < lowerBound || priceInput > upperBound) {
-        priceFiller = null;
-        console.log("fail" + priceFiller);
-    }
-    else {
-        priceFiller = $examplePrice.val().trim();
-        console.log("pass" + priceFiller);
-    }
-    console.log(std);
-    console.log(avg);
-
-
     //Creating the Object to Input to Database
     var example = {
         /*
         text: $exampleText.val().trim(),
         description: $exampleDescription.val().trim(),
         */
-        price: priceFiller,
+        price: priceInput,
         description: $exampleDescription.val().trim(),
         location: parseInt($("#avg").attr("data-location")),
         product: parseInt($("#avg").attr("data-product"))
@@ -389,19 +246,6 @@ var handleFormSubmit = function (event) {
 
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-/*
-var handleDeleteBtnClick = function () {
-    var idToDelete = $(this)
-        .parent()
-        .attr("data-id");
-
-    API.deleteExample(idToDelete).then(function () {
-        //refreshExamples();
-    });
-};
-*/
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
