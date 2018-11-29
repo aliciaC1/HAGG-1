@@ -1,14 +1,14 @@
 // set endpoint and your access key
 var endpoint = "live";
-var access_key = "4861c499dbd3575bc51aaac6ca8b1e73";
+var access_key = "f8115b1e547e6215feb92b33114aed62";
 
-var averageValue = $("#avg").attr("value");
 
 // get the most recent exchange rates via the "live" endpoint:
 $.ajax({
     url: "//apilayer.net/api/" + endpoint + "?access_key=" + access_key,
     dataType: "jsonp",
     success: function (json) {
+        var averageValue = $("#avg").attr("value");
         var euroCurrency = averageValue * json.quotes.USDEUR;
         var gbpCurrency = averageValue * json.quotes.USDGBP;
         var chineseCurrency = averageValue * json.quotes.USDCNY;
