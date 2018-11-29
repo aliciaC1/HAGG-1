@@ -11,8 +11,6 @@ var indexController = require("./routes");
 var loginController = require("./routes/login");
 var registerController = require("./routes/register");
 
-var db = require("./db/models")
-
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -62,14 +60,12 @@ app.use(function(err, req, res) {
 });
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+app.listen(PORT, function() {
+  console.log(
+    "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+    PORT,
+    PORT
+  );
 });
 
 module.exports = app;
