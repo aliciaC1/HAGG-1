@@ -49,10 +49,7 @@ var ctx = $("#myChart");
 var dataArray = [];
 var dataArray2 = [];
 
-//Latitude Array
-var dataArray3 = [];
-//Longtitude Array
-var dataArray4 = [];
+console.log($("#avg").attr("value"))
 
 Chart.defaults.LineWithLine = Chart.defaults.line;
 Chart.controllers.LineWithLine = Chart.controllers.line.extend({
@@ -169,36 +166,25 @@ var $examplePrice = $("#example-price");
 var $exampleProduct = $("#example-productID");
 var $submitBtn = $("#submitPrice");
 var $exampleList = $("#example-list");
+var avg;
 
-/*
-// The API object contains methods for each kind of request we'll make
-var API = {
-    saveExample: function (example) {
-        return $.ajax({
-            headers: {
-                "Content-Type": "application/json"
-            },
-            type: "POST",
-            url: "api/examples",
-            data: JSON.stringify(example)
-        });
-    },
-    getExamples: function () {
-        return $.ajax({
-            url: "api/examples",
-            type: "GET"
-        });
-    },
-    deleteExample: function (id) {
-        return $.ajax({
-            url: "api/examples/" + id,
-            type: "DELETE"
-        });
+//AJAX calls
+$.ajax({
+    url: "/api/examples",
+    method: "GET"
+}).then(function (data) {
+    console.log(data);
+    var sumArray = [];
+    var sumAvg = 0;
+    for (var i = 0; i < data.length; i++) {
+        sumArray.push(parseInt(data[i].price));
+        sumAvg += parseInt(data[i].price);
+        dataArray.push(data[i].createdAt);
+        dataArray2.push(data[i].price);
     }
-};
-*/
-
-console.log($("#avg").attr("data-location"));
+    avg = sumAvg / data.length;
+    console.log("AVG " + avg);
+});
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
@@ -245,7 +231,6 @@ var handleFormSubmit = function (event) {
 
 
 };
-
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
