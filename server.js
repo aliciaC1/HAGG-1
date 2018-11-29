@@ -11,6 +11,8 @@ var indexController = require("./routes");
 var loginController = require("./routes/login");
 var registerController = require("./routes/register");
 
+var db = require("./db/models")
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
