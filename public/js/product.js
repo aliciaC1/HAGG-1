@@ -1,6 +1,6 @@
 // set endpoint and your access key
 var endpoint = "live";
-var access_key = "fdefafcae0d2e512ba85f64693e2f861";
+var access_key = "4861c499dbd3575bc51aaac6ca8b1e73";
 
 var averageValue = $("#avg").attr("value");
 
