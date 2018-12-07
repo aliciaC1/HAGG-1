@@ -168,6 +168,7 @@ var $exampleProduct = $("#example-productID");
 var $submitBtn = $("#submitPrice");
 var $exampleList = $("#example-list");
 var avg;
+var std;
 
 //AJAX calls
 $.ajax({
@@ -184,16 +185,57 @@ $.ajax({
         dataArray2.push(data[i].price);
     }
     avg = sumAvg / data.length;
+    std = standardDeviation(sumArray);
     console.log("AVG " + avg);
+    console.log("STD "+ std);
 });
+
+//Use of Standard Deviation to Prevent "Troll" Amounts
+function standardDeviation(values) {
+    var avg = average(values);
+
+    var squareDiffs = values.map(function (value) {
+        var diff = value - avg;
+        var sqrDiff = diff * diff;
+        return sqrDiff;
+    });
+
+    var avgSquareDiff = average(squareDiffs);
+
+    var stdDev = Math.sqrt(avgSquareDiff);
+    return stdDev;
+}
+
+function average(data) {
+    var sum = data.reduce(function (sum, value) {
+        return sum + value;
+    }, 0);
+
+    var avg = sum / data.length;
+    return avg;
+}
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function (event) {
     event.preventDefault();
 
-
     var priceInput = $examplePrice.val().trim();
+
+    var doubleStd = std*2;
+
+    var lowerBound = avg - doubleStd;
+    var upperBound = avg + doubleStd;
+    if (priceInput < lowerBound || priceInput > upperBound) {
+        priceFiller = null;
+        console.log("fail" + priceFiller);
+    }
+    else {
+        priceFiller = $examplePrice.val().trim();
+        console.log("pass" + priceFiller);
+    }
+    console.log(doubleStd+"double standard deviation");
+    console.log(avg+"average");
 
     //Creating the Object to Input to Database
     var example = {
@@ -212,7 +254,7 @@ var handleFormSubmit = function (event) {
 
 
     if (!(example.product && example.location && example.description && example.price)) {
-        alert("Input Valid Amounts");
+        alert("Not All Text Fields Completed or Above Standard Deviation Threshold");
         $exampleText.val("");
         $exampleProduct.val("");
         $exampleDescription.val("");
@@ -225,7 +267,6 @@ var handleFormSubmit = function (event) {
         type: "POST",
         data: example
     }).then(function () {
-        console.log("It Worked");
         location.reload();
     }
     );
