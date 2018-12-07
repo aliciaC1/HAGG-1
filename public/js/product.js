@@ -186,8 +186,9 @@ $.ajax({
     }
     avg = sumAvg / data.length;
     std = standardDeviation(sumArray);
+    var doubleStd = std*2
     console.log("AVG " + avg);
-    console.log("STD "+ std);
+    console.log("Double STD "+ doubleStd);
 });
 
 //Use of Standard Deviation to Prevent "Troll" Amounts
@@ -221,6 +222,7 @@ var handleFormSubmit = function (event) {
     event.preventDefault();
 
     var priceInput = $examplePrice.val().trim();
+    var priceFiller; ///To Input
 
     var doubleStd = std*2;
 
@@ -243,7 +245,7 @@ var handleFormSubmit = function (event) {
         text: $exampleText.val().trim(),
         description: $exampleDescription.val().trim(),
         */
-        price: priceInput,
+        price: priceFiller,
         description: $exampleDescription.val().trim(),
         location: parseInt($("#avg").attr("data-location")),
         product: parseInt($("#avg").attr("data-product"))
