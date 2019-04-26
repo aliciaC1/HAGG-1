@@ -20,6 +20,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "extend": "^3.0.2",
     "google-auth-library": "^2.0.2",
     "hoek": "^5.0.4",
     "jquery": "^3.4.0",
