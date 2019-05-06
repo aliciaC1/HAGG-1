@@ -8,9 +8,24 @@ An app connecting users to the best deals in their area.
 ### Features 
 ![features](https://i.imgur.com/uuTkq8h.png)
 >
-### Future Development 
 
-Copyright HAGG 2018 
+### Technology: 
+> - Handlebars.js  
+> - CSS
+> - JavaScript 
+> - Node.js 
+> - Express
+> - Sequelize 
+> - Google OAuth 
+> - Semantic UI 
+> - CurrencyLayer API 
+> - Google Maps API 
+> - Charts.js
+
+### Future Development 
+> Mobile Application 
+
+Copyright © HAGG Application 
 
 
 
