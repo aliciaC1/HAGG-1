@@ -6,9 +6,9 @@ An app connecting users to the best deals in their area.
 ### Concept: 
 > An app connecting users to the best deals in their area. 
 
-    > Problem: Being scammed when purchasing products in foreign places at local vendors with no set prices. 
+    - Problem: Being scammed when purchasing products in foreign places at local vendors with no set prices. 
 
-    > Solution : Crowdsourced database of product location and prices users can access to help better negotiate prices to prevent from bbeing scammmed. 
+    - Solution : Crowdsourced database of product location and prices users can access to help better negotiate prices to prevent from bbeing scammmed. 
 ### Features: 
 ![features](https://i.imgur.com/uuTkq8h.png)
 >
